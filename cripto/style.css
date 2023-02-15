@@ -1,0 +1,388 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root{
+    --bg-color:#170543;
+    --main-color:#2d2c4c;
+    --text-color:#838390;
+}
+
+.primary-button{
+    cursor: pointer;
+    background-image: linear-gradient(to right,#ba45a8,#6c20cd,#3f0be1);
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-weight: 600;
+    color: white !important;
+    padding: 10px 23px;
+    transition: 0.2s ease-out;
+    text-decoration: none;
+}
+.primary-button:hover{
+    background-image: linear-gradient(to right,#3f0be1,#6c20cd,#ba45a8);
+    padding:14px 30px;
+    border-top-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-size: 20px;
+    transition:0.5s;
+    transition: 0.2s ease-out;
+    box-shadow: 2px 5px 2px #cf9aff;
+}
+.primary-button2{
+    cursor: pointer;
+    background-image: linear-gradient(to right,#ba45a8,#6c20cd,#3f0be1);
+    border-top-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    font-weight: 600;
+    color: white !important;
+    padding: 10px 23px;
+    transition: 0.2s;
+    text-decoration: none;
+}
+.primary-button2:hover{
+    background-image: linear-gradient(to right,#3f0be1,#6c20cd,#ba45a8);
+    padding:14px 30px;
+    font-size: 20px;
+}
+@media only screen and (max-width : 600px){
+   .primary-button2{
+        padding: 6px 6px ;
+   }
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+body{
+    background-image: linear-gradient(to right,#120620,#170543,#120620);
+    background-color:var(--bg-color);
+    height: 1000vh;
+    
+}
+
+.container{
+    max-width: 1320px;
+    margin-inline: auto;
+    padding:20px 60px;
+    justify-content: center;
+}
+@media only screen and (max-width : 1320px){
+    .container{
+        padding:20px 80px ;
+    }
+}
+
+@media only screen and (max-width : 1100px){
+    .container{
+        padding:20px 10px ;
+    }
+}
+
+@media only screen and (max-width : 600px){
+    .container{
+        padding:20px 10px ;
+    }
+}
+
+header{
+    display: block;
+    justify-content: space-around;
+    position:sticky;
+    top: 10px;
+    padding:5px 44px;
+    border-radius: 10px;
+    background: rgba(95, 78, 78, 0.09);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+@media only screen and (max-width : 1320px){
+    header{
+        padding:4px 80px ;
+    }
+}
+@media only screen and (max-width : 1100px){
+    header{
+        padding:4px 10px ;
+    }
+}
+@media only screen and (max-width : 900px){
+    header{
+        padding:4px 10px ;
+    }
+}
+a.logo{
+    font-size:30px;
+    font-family:'Poppins', sans-serif; 
+}
+@media only screen and (max-width : 900px){
+    a.logo{
+        font-size: 20px;
+    }
+}
+.logo img{
+    width: 40px;
+    margin-right: 5px;
+}
+@media only screen and (max-width : 600px){
+    .logo img{
+        width: 25px;
+    }
+}
+.navbar{
+    font-size: 20px;
+    color: rgb(186, 184, 184);
+}
+
+
+.navbar a{
+    margin:20px;
+    color: rgb(192, 187, 187);
+}
+
+.navbar a:hover{
+    color: #220b1d;
+    font-size: 24px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right,#3f0be1,#6c20cd,#ba45a8);
+    padding: 5px;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+}
+
+@media only screen and (max-width : 900px){
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+    .menu .line{
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 5px 0;
+    }
+    .navbar{
+        height: 400px;
+        position: absolute;
+        top: 80px;
+        border-radius: 10px;
+        width: 100vw;
+        transition: 0.2s;
+        overflow: hidden;
+    }
+
+    .navbar.active{
+        background-color: #120620;
+        height: 450px;
+    }
+    .navbar ul{
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .navbar ul li a{
+        margin-bottom: 20px;
+    }
+}
+.content{
+    justify-content:space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.content .left{
+    max-width: 25vw;
+}
+
+.content .main{
+    max-width: 15vw;
+}
+.content h1{
+    font-size: 60px;
+    color: #5f54c3;
+}
+
+.content crypto{
+    color: #df56a0;
+}
+
+.content p{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: rgb(133, 133, 133);
+}
+.right img{
+
+    max-width:600px;
+}
+@media only screen and (max-width : 600px){
+    .right img{
+        width: 400px;
+        padding:20px 10px;
+    }
+}
+/* info section */
+.info{
+    background-color: #180836;
+    padding: 100px 10px;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-radius: 20px;
+}
+.info .disp{
+    text-align: center;
+    max-width: 20vw;
+}
+@media only screen and (max-width : 600px){
+    .info{
+        justify-content: space-evenly;
+    }
+}
+.info .disp img{
+    width: 80px;
+    background-color:#fc4adc;
+    padding: 4px;
+    border-radius: 100px;
+    border:#6f3bf0 5px solid;
+}
+
+.disp h1{
+    font-size: 25px;
+    color: #5f54c3;
+}
+
+.disp p{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: rgb(133, 133, 133);
+}
+
+/* blockchain */
+.blockchain{
+    margin-top: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.blockchain .right{
+    max-width: 40vw;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+.blockchain  img{
+    width:450px;
+    border-radius: 20px;
+}
+@media only screen and (max-width : 600px){
+    .blockchain img{
+        width: 350px;
+    }
+}
+.blockchain .right h1{
+    font-size: 30px;
+    color: #5f54c3;
+}
+@media only screen and (max-width : 400px){
+    .blockchain .right{
+        padding:0px 5px ;
+        text-align: start;
+    }
+}
+.blockchain .points{
+    gap: 20px;
+}
+.blockchain .points h1{
+    color: white;
+    background-color:#df56a0;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.blockchain .points p{
+    color: rgb(133, 133, 133);
+}
+
+/* Roadmap */
+.roadmap{
+    background: #180836;
+    border-radius: 20px;
+    margin-top: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.roadmap .left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    max-width: 40vw;
+}
+.roadmap .right{
+    border-radius: 20px;
+    padding: 10px;
+}
+.roadmap h1{
+    font-size: 35px;
+    color: #5f54c3;
+}
+
+.roadmap p{
+    color: #838390;
+}
+
+.roadmap img{
+    width: 450px;
+    border-radius:20px; 
+}
+
+@media only screen and (max-width : 600px){
+    
+    .roadmap .right img{
+        width: 380px;
+    }
+}
+
+@media only screen and (max-width : 400px){
+    .roadmap .left{
+        padding:0px 5px;
+    }
+}
+
+/* contact */
+.contact{
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+.contact .top{
+    gap: 10px;
+    flex-direction: column;
+}
+.contact .top h1{
+    color: #5f54c3;
+}
+
+.contact .top p{
+    color: #838390;
+}
